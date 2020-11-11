@@ -1,0 +1,14 @@
+<div class="layout-box">
+    <div class="top-bar">
+        <h1>Notes Mate</h1>
+        <div class="field is-grouped is-pulled-right">
+            <a class="nav-link" *ngIf="!authService.loggedIn()" routerLink="/login"><h1>LogIn</h1></a>
+        <a class="nav-link" *ngIf="authService.loggedIn()" (click)="logout()"><h1>Logout</h1></a>
+        </div>
+
+    </div>
+
+    <div class="page-content">
+        <router-outlet></router-outlet>
+    </div>
+</div>
